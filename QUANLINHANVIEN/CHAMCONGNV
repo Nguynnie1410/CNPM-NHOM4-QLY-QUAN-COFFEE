@@ -1,1 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chấm Công Nhân Viên</title>
+</head>
+<body>
+
+<h1>Chấm Công Nhân Viên</h1>
+
+<a href="index.html">Trang chủ</a>
+
+<form>
+    <label>Mã nhân viên:</label><br>
+    <input type="text"><br><br>
+
+    <label>Ngày làm:</label><br>
+    <input type="date"><br><br>
+
+    <button type="submit">Chấm Công</button>
+</form>
+
+</body>
+</html>
 
