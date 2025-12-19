@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #fdfbfb, #ebedee);
+    padding: 30px;
+}
+
+/* Tiêu đề chính */
+h1 {
+    background: #fdcb6e;
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #070401;
+}
+
+/* ====== TIÊU ĐỀ CÁC KHU ====== */
+h2 { background: #ff7675; }
+h3 { background: #74b9ff; }
+h4 { background: #55efc4; }
+h5 { background: #ffeaa7; color: #333; }
+h6 { background: #a29bfe; }
+h7 { background: #fd79a8; }
+h8 { background: #fdcb6e; color: #333; }
+
+h2, h3, h4, h5, h6, h7, h8 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* ====== KHỐI DANH SÁCH ====== */
+ul, u2, u3, u4, u5, u6, u7, u8 {
+    list-style: none;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Item */
+li {
+    margin: 12px 0;
+}
+
+/* Link dạng button */
+a {
+    display: block;
+    padding: 12px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    background: linear-gradient(135deg, #dfe6e9, #b2bec3);
+    color: #2d3436;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+/* Hover hiệu ứng */
+a:hover {
+    background: linear-gradient(135deg, #6f4e37, #8d6e63);
+    color: white;
+    transform: translateX(8px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 24px;
+    }
+}
