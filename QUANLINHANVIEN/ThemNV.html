@@ -2,40 +2,81 @@
 <html>
 <head>
     <title>Thêm Nhân Viên</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ThemNV.css">
 </head>
 <body>
 
-<nav>
-    <a href="index.html">Trang chủ</a>
-    <a href="CHAMCONGNV.html">Chấm Công</a>
-    <a href="QUANLICALAM.html">Quản Lý Ca Làm</a>
-    <a href="THEMNV.html">Thêm NV</a>
-    <a href="THONGTINNV.html">Thông Tin NV</a>
-    <a href="XOANV.html">Xóa NV</a>
-</nav>
+<h1>Thêm Nhân Viên</h1>
 
-<div class="container">
-    <img class="header-img" src="https://i.imgur.com/nw8zTQZ.jpeg">
+<a href="index.html">Trang chủ</a>
 
-    <h1>Thêm Nhân Viên</h1>
+<form>
+    <label>Mã nhân viên:</label><br>
+    <input type="text"><br><br>
 
-    <form>
-        <label>Mã Nhân Viên</label>
-        <input type="text">
+    <label>Họ tên:</label><br>
+    <input type="text"><br><br>
 
-        <label>Họ tên</label>
-        <input type="text">
+    <label>Số điện thoại:</label><br>
+    <input type="text"><br><br>
 
-        <label>Số điện thoại</label>
-        <input type="text">
+    <label>Chức vụ:</label><br>
+    <input type="text"><br><br>
 
-        <label>Chức vụ</label>
-        <input type="text">
+    <button type="submit">Thêm</button>
+</form>
 
-        <button type="submit">Thêm Nhân Viên</button>
-    </form>
-</div>
+<script>
+function themNhanVien(event) {
+    event.preventDefault(); // không reload trang
+
+    // Lấy dữ liệu từ form
+    let maNV = document.getElementById("maNV").value.trim();
+    let hoTen = document.getElementById("hoTen").value.trim();
+    let sdt = document.getElementById("sdt").value.trim();
+    let chucVu = document.getElementById("chucVu").value.trim();
+
+    // Kiểm tra dữ liệu
+    if (maNV === "" || hoTen === "" || sdt === "" || chucVu === "") {
+        alert("Vui lòng nhập đầy đủ thông tin!");
+        return;
+    }
+
+    if (isNaN(sdt)) {
+        alert("Số điện thoại phải là số!");
+        return;
+    }
+
+    // Tạo object nhân viên
+    let nhanVien = {
+        maNV: maNV,
+        hoTen: hoTen,
+        sdt: sdt,
+        chucVu: chucVu
+    };
+
+    // Lấy danh sách NV từ localStorage
+    let dsNV = JSON.parse(localStorage.getItem("dsNhanVien")) || [];
+
+    // Kiểm tra trùng mã NV
+    let trungMa = dsNV.some(nv => nv.maNV === maNV);
+    if (trungMa) {
+        alert("Mã nhân viên đã tồn tại!");
+        return;
+    }
+
+    // Thêm vào danh sách
+    dsNV.push(nhanVien);
+
+    // Lưu lại localStorage
+    localStorage.setItem("dsNhanVien", JSON.stringify(dsNV));
+
+    alert("Thêm nhân viên thành công!");
+
+    // Quay về trang chủ
+    window.location.href = "index.html";
+}
+</script>
 
 </body>
 </html>

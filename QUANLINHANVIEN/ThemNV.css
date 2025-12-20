@@ -1,0 +1,105 @@
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Nền tối */
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Khung glass */
+.container {
+    width: 420px;
+    padding: 32px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Tiêu đề */
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 28px;
+    letter-spacing: 1px;
+}
+
+/* Link */
+a {
+    display: inline-block;
+    margin-bottom: 22px;
+    color: #9ddcff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+/* Label */
+label {
+    color: #e0e0e0;
+    font-size: 14px;
+    margin-bottom: 6px;
+    display: block;
+}
+
+/* Input */
+input {
+    width: 100%;
+    padding: 11px 14px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255, 255, 255, 0.85);
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    background: #ffffff;
+    box-shadow: 0 0 0 2px #4facfe;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 13px;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(135deg, #36d1dc, #5b86e5);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .container {
+        width: 92%;
+        padding: 24px;
+    }
+}
