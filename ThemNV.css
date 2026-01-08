@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
     box-sizing: border-box;
     margin: 0;
@@ -99,4 +100,107 @@ button:active {
     .container {
         padding: 20px;
     }
+=======
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.home {
+    display: block;
+    text-align: center;
+    color: #3498db;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.home:hover {
+    text-decoration: underline;
+}
+
+form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #3498db;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+>>>>>>> e5ca443d040dd07efe224a45210b7a4e58ceccfa
 }
